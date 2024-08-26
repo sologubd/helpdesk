@@ -1,0 +1,22 @@
+textarea {
+  resize: none;
+}
+.container {
+  margin-top: 2rem;
+}
+button.danger {
+  background-color: #f74b3e;
+  color: white;
+}
+ul.menu {
+  list-style-type: none;
+  padding: 0 0 0 2.5rem;
+}
+li.menu-item > a {
+  text-decoration: none;
+  color: #000;
+}
+li.menu-item.active > a {
+  text-decoration: none;
+  color: #1eaedb;
+}

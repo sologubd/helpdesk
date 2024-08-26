@@ -1,0 +1,14 @@
+{% macro render(current_page) %}
+
+<ul class="menu">
+  <li class="{% if current_page == '' %} active {% endif %} menu-item"><a href="/">Dashboard</a></li>
+  <li class="{% if current_page == 'tickets' %} active {% endif %} menu-item"><a href="/tickets">Tickets</a></li>
+  <li class="{% if current_page == 'message' %} active {% endif %} menu-item"><a href="/message">Messages</a></li>
+</ul>
+<hr/>
+<ul class="menu">
+  <li class="{% if current_page == 'addresses' %} active {% endif %} menu-item"><a href="/addresses">Addresses</a></li>
+  <li class="{% if current_page == 'agents' %} active {% endif %} menu-item"><a href="/agents">Agents</a></li>
+  <li class="{% if current_page == 'teams' %} active {% endif %} menu-item"><a href="/teams">Teams</a></li>
+</ul>
+{% endmacro %}

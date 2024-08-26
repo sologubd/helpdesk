@@ -1,0 +1,22 @@
+{% extends "base.jinja2" %}
+
+{% import "base/sidebar.jinja2" as sidebar %}
+
+{% block content %}
+  <div class="row">
+    <div class="three columns">
+      {{ sidebar.render('addresses') }}
+    </div>
+    <div class="nine columns">
+      <div class="row">
+        <h5>Addresses</h5>
+        <div class="u-pull-right">
+        <button class="button-primary" hx-trigger="click" hx-target="#layout" hx-get="/addresses/new-address/">New Address</button>
+      </div>
+      </div>
+      <div id="layout" class="row">
+        {% include "addresses/grid.jinja2" with context %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

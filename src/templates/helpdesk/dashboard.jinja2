@@ -1,0 +1,13 @@
+{% extends "base.jinja2" %}
+{% import "base/sidebar.jinja2" as sidebar %}
+
+{% block content %}
+  <div class="row">
+    <div class="three columns">
+      {{ sidebar.render('') }}
+    </div>
+    <div class="nine columns">
+      Content
+    </div>
+  </div>
+{% endblock %}

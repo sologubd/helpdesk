@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpDesk</title>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/helpdesk/normalize.css">
+    <link rel="stylesheet" href="/static/helpdesk/skeleton.css">
+    <link rel="stylesheet" href="/static/helpdesk/base.css">
+    <script src="/static/helpdesk/htmx.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <span class="app-title"><h4>Help Desk</h4></span>
+      </div>
+      <hr />
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

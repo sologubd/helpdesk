@@ -1,0 +1,14 @@
+<form hx-post="/teams/" hx-target="#layout">
+  <div class="row">
+    <div class="u-full-width">
+      <label for="team-name">Team Name</label>
+      <input class="u-full-width" name="name" type="text" placeholder="Name" id="team-name">
+    </div>
+  </div>
+  <label for="email">Adderess</label>
+  <select class="u-full-width" name="email" id="email">
+    {% for address in addresses %}
+      <option value="{{ address.id }}">{{ address.email }}</option>
+    {% endfor %}
+  <input class="button-primary u-pull-right" type="submit" value="Submit">
+</form>

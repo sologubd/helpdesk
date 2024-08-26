@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    command: ./start.sh
+    volumes:
+      - ./src/:/usr/src/helpdesk
+    ports:
+      - 8000:8000
+    env_file:
+      - .env.local

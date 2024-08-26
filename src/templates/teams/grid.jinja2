@@ -1,0 +1,23 @@
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody hx-confirm="Are you sure?" hx-target="closest tr" hx-swap="outerHTML swap:1s">
+    {% for item in items %}
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email.email }}</td>
+        <td>
+          <button class="button">Edit</button>
+          <button class="button danger" hx-delete="/teams/{{item.id}}/">Delete</button>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
