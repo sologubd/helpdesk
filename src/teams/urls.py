@@ -1,4 +1,5 @@
 from django.urls import path
+
 from teams.views import Team, get_team_form
 
 urlpatterns = [

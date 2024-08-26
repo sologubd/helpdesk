@@ -7,7 +7,15 @@
       {{ sidebar.render('tickets') }}
     </div>
     <div class="nine columns">
-      Tickets
+      <div class="row">
+        <h5>Tickets</h5>
+        <div class="u-pull-right">
+        <button class="button-primary" hx-trigger="click" hx-target="#layout" hx-get="/tickets/new/">New Ticket</button>
+      </div>
+      </div>
+      <div id="layout" class="row">
+        {% include "tickets/grid.jinja2" with context %}
+      </div>
     </div>
   </div>
 {% endblock %}

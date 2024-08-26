@@ -29,5 +29,10 @@ class Team(View):
 def get_team_form(request):
     template = loader.get_template("teams/new_team.jinja2")
     address_list = [{"id": None, "email": "Choose Email"}]
-    address_list.extend([{"id": address.id, "email": address.email} for address in AddressModel.objects.all()])
+    address_list.extend(
+        [
+            {"id": address.id, "email": address.email}
+            for address in AddressModel.objects.all()
+        ]
+    )
     return HttpResponse(template.render({"addresses": address_list}))

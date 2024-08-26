@@ -1,0 +1,35 @@
+<form hx-post="/tickets/" hx-target="#layout">
+  <div class="row">
+    <div class="u-full-width">
+      <label for="title">Title</label>
+      <input class="u-full-width" name="title" type="text" id="title">
+    </div>
+  </div>
+  <div class="row">
+    <div class="u-full-width">
+      <label for="status">Status</label>
+      <select class="u-full-width" name="status" id="status" disabled>
+      {% for status in statuses %}
+        <option value="{{ status[0] }}">{{ status[1] }}</option>
+      {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="u-full-width">
+      <label for="last-name">description</label>
+      <textarea class="u-full-width" rows="10" name="description" placeholder="Describe the issue in details..." id="description"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="u-full-width">
+      <label for="assigned-to">Assigned To</label>
+      <select class="u-full-width" name="assigned-to" id="assigned-to">
+      {% for team in teams %}
+        <option value="{{ team.id }}">{{ team.name }}</option>
+      {% endfor %}
+      </select>
+    </div>
+  </div>
+  <input class="button-primary u-pull-right" type="submit" value="Submit">
+</form>

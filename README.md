@@ -2,6 +2,12 @@
 
 A simple tool for the support team that allows to manage incidents.
 
+##
+Resources:
+- [Django](https://www.djangoproject.com/)
+- [Skeleton (CSS)](https://getskeleton.com/)
+- [HTMX](https://htmx.org/)
+
 # Installation
 
 ## Requirements

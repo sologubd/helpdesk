@@ -7,7 +7,15 @@
       {{ sidebar.render('agents') }}
     </div>
     <div class="nine columns">
-      Agents
+      <div class="row">
+        <h5>Agents</h5>
+        <div class="u-pull-right">
+        <button class="button-primary" hx-trigger="click" hx-target="#layout" hx-get="/agents/new/">New Agent</button>
+      </div>
+      </div>
+      <div id="layout" class="row">
+        {% include "agents/grid.jinja2" with context %}
+      </div>
     </div>
   </div>
 {% endblock %}

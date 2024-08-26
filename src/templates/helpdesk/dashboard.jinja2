@@ -6,8 +6,14 @@
     <div class="three columns">
       {{ sidebar.render('') }}
     </div>
-    <div class="nine columns">
-      Content
+    <div class="three columns" style="background-color:#f74b3e; padding:5rem; border-radius:1.5rem">
+      IN PROGRESS: {{ in_progress }}
+    </div>
+    <div class="three columns" style="background-color:#f7b93e; padding:5rem; border-radius:1.5rem">
+      POSTPONED: {{ postponed }}
+    </div>
+    <div class="three columns" style="background-color:#1eaedb; padding:5rem; border-radius:1.5rem">
+      RESOLVED: {{ resolved }}
     </div>
   </div>
 {% endblock %}
